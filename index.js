@@ -2,6 +2,10 @@
  * ⁡⁢⁢⁢⁡⁢⁣⁡⁢⁣⁢​‌‌​‌‍‌‍ℕ𝕆𝕋𝔼​​⁡⁡: ⁡⁢⁢⁣𝕋𝕆 ℂℝ𝔼𝔸𝕋𝔼 𝕊𝔼ℝ𝕍𝔼ℝ 𝕌𝕊𝕀ℕ𝔾 𝔼𝕏ℙℝ𝔼𝕊𝕊⁡
  * ⁡⁢⁢⁢1.REQUIRE EXPRESS⁡
  * ⁡⁢⁢⁢2.LISTEN IT⁡
+ *
+ *
+ * 3.HOW CAN WE CONNECT MONGODB TO MONGOOSE
+ * 4.HOW TO CREATE THE SCHEMA AND READ IT
  */
 const express = require("express");
 const hostName = "http://localhost";
@@ -38,6 +42,7 @@ app.listen(port, (err) => {
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "view"), "views");
+app.use(express.static("assets")); //⁡⁢⁢⁢⁡⁢⁣⁣𝙏𝙃𝙄𝙎 𝙄𝙎 𝙐𝙎𝙀𝘿 𝙁𝙊𝙍 𝙎𝙏𝙔𝙇𝙄𝙉𝙂 𝙏𝙃𝙀 𝘾𝙊𝙉𝙏𝘼𝘾𝙏 𝙇𝙄𝙎𝙏.⁡⁡
 
 // ⁡⁢⁢⁢THIS IS THE BODY PARSER => USE FOR ::⁡ ⁡⁣⁣⁢𝗣𝗢𝗦𝗧,𝗣𝗔𝗧𝗖𝗛,𝗣𝗨𝗧 𝗛𝗧𝗧𝗣 𝗥𝗘𝗤𝗨𝗘𝗦𝗧𝗦⁡
 app.use(express.urlencoded());
